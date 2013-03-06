@@ -1,4 +1,4 @@
-'convert from CSV to VW format'
+'convert from [stackoverflow-specific] CSV to VW format'
 
 import sys, csv, re
 
