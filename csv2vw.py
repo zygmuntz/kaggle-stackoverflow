@@ -2,6 +2,8 @@
 
 import sys, csv, re
 
+test_label = '1'
+
 def get_label( status ):
 	statuses = ['not a real question', 'not constructive', 'off topic', 'open', 'too localized']
 	label = statuses.index( status ) + 1
@@ -31,7 +33,7 @@ for line in reader:
 	if status != '0':
 		label = get_label( status )	
 	else:
-		label = status		# test set
+		label = test_label
 		
 	output_line = "%s %s %s" % ( label, 1, post_id ) 	# weight is 1
 	output_line += "|n %s %s" % ( reputation, good_posts )
